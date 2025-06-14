@@ -11,7 +11,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      background: #eeced4; 
+      background: #eeced4; /* pared rosada */
       position: relative;
     }
 
@@ -21,11 +21,20 @@
       z-index: 1;
     }
 
+    .baseboard {
+      position: absolute;
+      bottom: 45%; /* justo encima del piso */
+      width: 100%;
+      height: 10px; /* altura del zócalo */
+      background-color: #b5794e; /* tono más oscuro para contraste */
+      z-index: 1;
+    }
+
     .floor {
       position: absolute;
       bottom: 0;
       width: 100%;
-      height: 45%; 
+      height: 45%;
       background: repeating-linear-gradient(
         45deg,
         #d4965f,
@@ -39,6 +48,7 @@
 </head>
 <body>
   <img src="Iliaday14.gif" alt="GIF en habitación de Ilia">
+  <div class="baseboard"></div>
   <div class="floor"></div>
 </body>
 </html>
