@@ -1,25 +1,73 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8">
-    <title>Mi GIF</title>
+    <meta charset="UTF-8" />
+    <title>GIF en un bosque</title>
     <style>
       body {
         margin: 0;
         height: 100vh;
+        overflow: hidden;
         display: flex;
         justify-content: center;
-        align-items: center;
-        background: linear-gradient(135deg, #1f1c2c, #928DAB);
+        align-items: flex-end;
+        background: linear-gradient(to top, #88c070 0%, #b4e197 30%, #d2f0d5 80%, #a0c4ff 100%);
+        position: relative;
       }
 
+      .tree {
+        position: absolute;
+        bottom: 0;
+        width: 0;
+        height: 0;
+        border-left: 25px solid transparent;
+        border-right: 25px solid transparent;
+        border-bottom: 60px solid #3e8e41;
+      }
+
+      .tree::before {
+        content: '';
+        position: absolute;
+        top: -40px;
+        left: -25px;
+        width: 0;
+        height: 0;
+        border-left: 25px solid transparent;
+        border-right: 25px solid transparent;
+        border-bottom: 50px solid #3e8e41;
+      }
+
+      .tree::after {
+        content: '';
+        position: absolute;
+        top: -75px;
+        left: -25px;
+        width: 0;
+        height: 0;
+        border-left: 25px solid transparent;
+        border-right: 25px solid transparent;
+        border-bottom: 40px solid #3e8e41;
+      }
+
+      .tree1 { left: 10%; }
+      .tree2 { left: 30%; transform: scale(1.2); }
+      .tree3 { left: 70%; transform: scale(0.9); }
+      .tree4 { left: 85%; transform: scale(1.1); }
+
       img {
-        max-width: 90%;
-        max-height: 90%;
+        position: relative;
+        z-index: 2;
+        margin-bottom: 60px;
+        max-height: 40vh;
       }
     </style>
   </head>
   <body>
-    <img src="Iliaday14.gif" alt="Mi GIF animado">
+    <div class="tree tree1"></div>
+    <div class="tree tree2"></div>
+    <div class="tree tree3"></div>
+    <div class="tree tree4"></div>
+    <img src="Iliaday14.gif" alt="GIF en bosque" />
   </body>
 </html>
+
